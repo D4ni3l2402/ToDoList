@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #191C1F;
+    font-family: "Poppins", sans-serif;
+
+}
+
+h1, p {
+    margin: 0;
+}
+
+.container {
+    max-width: 1400px;
+    margin-inline: auto;
+}
+
+header {
+    height: 65px;
+    background-color: #2F2FA2;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.35); /* Hier wird ein Schatten mit einer Weichheit von 10px erzeugt */
+
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+    margin-top: 3rem;
+}
+
+header .logo {
+    margin-left: 1.5rem;
+    color: #F64C72;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+header nav {
+    height: 100%;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    height: 100%;
+    /* gap: 1.75rem; */
+    margin: 0;
+    padding: 0;
+}
+
+
+header nav ul li:last-child a {
+    padding-right: 1.5rem;
+    border-radius: 0 15px 15px 0;
+    /* background-color: #F64C72; */
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 1.1rem;
+
+    &:hover {
+        color: #F64C72;
+        background-color: #3434bf;
+    }
+}
+
+.todo-container {
+    width: 75%;
+    margin-inline: auto;
+    margin-top: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.45); /* Hier wird ein Schatten mit einer Weichheit von 10px erzeugt */
+
+    h1 {
+        text-align: center;
+        padding: 1.25rem 0;
+    }
+}
+
+.todo-container .search {
+    display: flex;
+    justify-content: center; 
+
+}
+
+.todo-container .search input {
+    width: 50%;
+    height: 3rem;
+    border-radius: 5px 0 0 5px;
+    border: 1px;
+    padding: 0.5rem 1.1rem;
+    background-color: rgb(225, 225, 225);
+}
+
+.search-btn {
+    width: 3rem;
+    border: 0;
+    border-radius: 0 5px 5px 0;
+    background-color: #F64C72;
+
+    i {
+        font-size: 1.11rem;
+        color: white;
+    }
+
+    &:hover {
+        background-color: #f56685;
+        cursor: pointer;
+    }
+}
+
+.todo-container .add {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    /* background-color: #191C1F; */
+}
+
+.todo-container .add input {
+    width: 50%;
+    height: 3rem;
+    border-radius: 5px 0 0 5px;
+    border: 1px;
+    padding: 0.5rem 1.1rem;
+    background-color: rgb(225, 225, 225);
+}
+
+.add-btn {
+    border: 0;
+    border-radius: 0 5px 5px 0;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.056rem;
+    background-color: #F64C72;
+    color: white;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #f56685;
+    }
+
+}
+
+.todos {
+    width: 90%;
+    padding: 1.22rem 0;
+    margin-top: 3rem;
+    margin-inline: auto;
+    /* border: 1px solid gray; */
+    /* border-radius: 10px; */
+
+    
+}
+
+.todos ul {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(216, 216, 216);
+    border-radius: 10px;
+    /* isplay: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;d */
+}
+
+.todos ul li {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    border-bottom: 1px solid hsla(210, 2%, 34%, 0.2);
+    padding: 1.25rem;
+}
+
+.todos ul .finished {
+    background-color: rgba(0, 159, 0, 0.3);
+}
+
+.todos ul li:last-child {
+    border: 0;
+}
+
+.action-btns {
+    display: flex;
+}
+
+.todos ul li .action-btns i {
+    margin: 0 1rem;
+    font-size: 1.05rem;
+
+    &:hover {
+        color: #F64C72;
+        cursor: pointer;
+    }
+}
+
+.edit-form {
+    display: none;
+    width: 60%
+}
+
+.edit-form .edit-input {
+    width: 100%;
+    border: 0;
+    padding: 0.5rem 1.1rem;
+
+}
+
+.edit-form .save-edit {
+    border: 0;
+    padding: 0.5rem 1.2rem;
+    font-size: 1.1rem;
+    border-radius: 0 5px 5px 0;
+    background-color: #F64C72;
+
+    i {
+        color: white;
+    }
+}
+
+.exit-edit {
+    display: none;
+    font-size: 1.5rem;
+}
+
+.delete-link {
+    color: black;
+}
+
+.check, .uncheck {
+    text-decoration: none;
+    color: black;
+}
+
+.uncheck:hover {
+    color: red;
+}
+
+.check:hover i {
+    color: green !important;
+    /* background-color: rgba(0, 159, 0, 0.459); */
+}
+
+
+@media screen and (max-width: 1025px) {
+    .container {
+        width: 90%;
+    }
+
+    .todo-container {
+        width: 90%;
+    }
+}
+
+
